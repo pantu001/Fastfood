@@ -1,0 +1,95 @@
+.navbar{
+    	border-bottom: #e600e5 solid 5px;
+    	font-size: 24px;
+    }
+
+.navbar-brand{
+	color: #F676F6 !important;
+	font-size: 24px;
+}
+.nav-link{
+	text-transform: uppercase;
+}
+
+@mixin button() {
+	outline: none;
+	border:none;
+	border-radius: 5rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	letter-spacing: .2rem;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+		background:$yellow;
+		height: 100%;
+		width: 0%;
+		transition: .2s;
+		z-index: -1;
+	}
+
+	&:hover::before{
+		width: 0%;
+	}
+}
+#home{
+	background:linear-gradient(0deg, rgba(0,0,0,.6),rgba(0,0,0,.6));
+	position: relative;
+
+	.content{
+
+
+		h1{
+
+			font-size: 3.5rem;
+			font-family: 'Papyrus' ,fantasy;
+			font-weight: bolder;
+			text-shadow: .1rem .1rem .3rem #333
+			color:$yellow;
+		}
+		h2{
+			font-size: 2rem;
+			font-family: 'Papyrus' ,fantasy;
+			font-weight: bolder;
+			text-shadow: .1rem .1rem .3rem #333
+			margin:1rem 0;
+		}
+		button{
+			@include button();
+			height: 2rem;
+			width: 8rem;
+			background-color: #fff;
+		}
+	}
+	.videeo-container {
+		position: absolute;
+		top: 0; left: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: -1;
+
+		
+	}
+	.dots{
+		height: 2rem;
+		width: 2rem;
+		cursor: pointer;
+		background: tomato;
+		margin: 0 1rem;
+
+		&:hover{
+			
+		}
+	}
+}
+
+
+
+
